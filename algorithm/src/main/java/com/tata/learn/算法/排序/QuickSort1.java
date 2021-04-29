@@ -2,8 +2,9 @@ package com.tata.learn.算法.排序;
 
 public class QuickSort1 implements ISort {
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         quickSort(array);
+        return array;
     }
 
     private void quickSort(int[] array) {

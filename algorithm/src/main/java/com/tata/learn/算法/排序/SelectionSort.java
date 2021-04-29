@@ -1,5 +1,7 @@
 package com.tata.learn.算法.排序;
 
+import com.example.lib.Printer;
+
 /**
  * 选择排序
  * a、将第一个值看成最小值
@@ -12,7 +14,7 @@ package com.tata.learn.算法.排序;
  */
 public class SelectionSort implements ISort {
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int minIndex = i;
             for (int j = i + 1; j < array.length; j++) {
@@ -20,23 +22,13 @@ public class SelectionSort implements ISort {
                     minIndex = j;
                 }
             }
-            int temp = array[i];
+             int temp = array[i];
             array[i] = array[minIndex];
             array[minIndex] = temp;
+            Printer.print(array);
         }
+        return array;
     }
 
-    public void sort1(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[minIndex]) {
-                    minIndex = j;
-                }
-            }
-            int temp = array[i];
-            array[i] = array[minIndex];
-            array[minIndex] = temp;
-        }
-    }
+
 }

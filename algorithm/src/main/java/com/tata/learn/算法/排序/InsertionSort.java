@@ -12,7 +12,7 @@ package com.tata.learn.算法.排序;
  */
 public class InsertionSort implements ISort {
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (array[j] < array[j - 1]) {
@@ -24,10 +24,11 @@ public class InsertionSort implements ISort {
                 }
             }
         }
+        return array;
     }
 
     public void sort1(int[] array) {
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (array[j] < array[j - 1]) {
                     int temp = array[j];
@@ -39,4 +40,6 @@ public class InsertionSort implements ISort {
             }
         }
     }
+
+
 }
